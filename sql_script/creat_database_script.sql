@@ -1,0 +1,17 @@
+CREATE TABLE candidate_quiz_database.user (
+    id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    name TEXT,
+    email TEXT NOT NULL,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    favorite_song JSON
+);
+
+-- ALTER TABLE candidate_quiz_database.user ADD COLUMN favorite_song JSON;
+
+CREATE TABLE candidate_quiz_database.song (
+    id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    name TEXT NOT NULL,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
