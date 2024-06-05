@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql:latest
+    container_name: mysql_server
+    environment:
+      MYSQL_ROOT_PASSWORD: admin
+      MYSQL_DATABASE: candidate_quiz_database
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: admin1234
+    ports:
+      - "7000:3306"
+    volumes:
+      - ./db_data:/var/lib/mysql
+  
+  app:
+    build: ./app/
+    container_name: app
+    ports:
+      - "3000:3000"
+    environment:
+      - DB_HOST=db
+      - DB_PORT=3306
+      - DB_USER=admin
+      - DB_PASSWORD=admin1234
+      - DB_NAME=candidate_quiz_database
+    depends_on:
+      - db
+
+volumes:
+  db_data:
