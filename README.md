@@ -26,7 +26,7 @@ if (querySongResult.length < 1){
 
 - Add New User
 
-```
+```java
 curl --request POST \
   --url http://localhost:3000/users \
   --header 'Content-Type: application/json' \
@@ -39,7 +39,7 @@ curl --request POST \
 ```
 
 - Add New Song
-```
+```java
 curl --request POST \
   --url http://localhost:3000/song \
   --header 'Content-Type: application/json' \
@@ -50,7 +50,7 @@ curl --request POST \
 }'
 ```
 - User Add Favorite Song
-```
+```java
 curl --request POST \
   --url http://localhost:3000/users/1/songs/15 \
   --header 'Content-Type: application/json' \
@@ -62,7 +62,7 @@ curl --request POST \
 ```
 
 - Get User Favorite Song
-```
+```java
 curl --request GET \
   --url http://localhost:3000/users/1/songs \
   --header 'Content-Type: application/json' \
@@ -71,7 +71,7 @@ curl --request GET \
 ```
 
 - User Delete Favorite Song
-```
+```java
 curl --request DELETE \
   --url http://localhost:3000/users/1/songs/3 \
   --header 'Content-Type: application/json' \
@@ -82,7 +82,7 @@ curl --request DELETE \
 }'
 ```
 - Patch Users
-```
+```java
 curl --request PATCH \
   --url http://localhost:3000/users/3 \
   --header 'Content-Type: application/json' \
@@ -93,7 +93,7 @@ curl --request PATCH \
 }'
 ```
 - Patch Song
-```
+```java
 curl --request PATCH \
   --url http://localhost:3000/song/1 \
   --header 'Content-Type: application/json' \
@@ -104,7 +104,7 @@ curl --request PATCH \
 }'
 ```
 - Delete User
-```
+```java
 curl --request DELETE \
   --url http://localhost:3000/users/2 \
   --header 'Content-Type: application/json' \
@@ -112,7 +112,7 @@ curl --request DELETE \
   --cookie session=eyJzdGF0ZSI6IjhVV0E3QnZNaEIwQ043c3QwbEx1VG5TelVCZ3pRbSJ9.ZhtE2A.VRE_xbtWBsWrFHXhewYnPXOJd38
 ```
 - Delete Song
-```
+```java
 curl --request DELETE \
   --url http://localhost:3000/song/2 \
   --header 'Content-Type: application/json' \
