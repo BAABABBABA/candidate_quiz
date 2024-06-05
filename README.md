@@ -1,15 +1,28 @@
 # 📝 Coding For Apply Programmer Role
 ---
-
-## Including :
+### Including :
 - source code in app folder
 - Dockerfile in app folder
 - docker-compose.yaml for deployment
 - SQL Scipt
+---
+### Additional Feature
+- ได้มีการเพิ่ม POST, DELETE /song และ PATCH /song/{songId} เพื่อใช้ในการ manipulate song data
+- ได้มีการเพิ่มการตรวจสอบว่ามี User อยู่จริงในระบบ table
+```
+if (queryUserResult.length < 1){
+    return res.status(400).send({ 'code': 500, 'msg': 'Not found user' })
+}
+```
+- ได้มีการเพิ่มการตรวจสอบว่ามี Song อยู่จริงในระบบ table
+```
+if (querySongResult.length < 1){
+    return res.status(400).send({ 'code': 500, 'msg': 'Not found song' })
+}
+```
 
 ---
-## Additional :
-#### CURL command Example
+### CURL Command Example for Testing
 
 - Add New User
 
